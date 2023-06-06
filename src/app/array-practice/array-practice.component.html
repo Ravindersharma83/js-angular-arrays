@@ -1,0 +1,26 @@
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of jsonData">
+        <td>{{ item.username }}</td>
+        <td>{{ item.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>Dependent DropDown</h1>
+  <select class="form-select w-25" #mySelect (change)="getCities(mySelect.value)">
+    <option disabled>Select Country</option>
+    <option>Choose country</option>
+    <option value="{{item.id}}" *ngFor="let item of country">{{item.name}}</option>
+  </select>
+
+  <select class="form-select w-25">
+    <option>Select City ..</option>
+    <option value="{{item.id}}" *ngFor="let item of cityList">{{item.name}}</option>
+  </select>
