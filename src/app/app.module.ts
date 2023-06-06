@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserDataService } from './user-data.service';
 import { ArrayFindComponent } from './array-find/array-find.component';
+import { ArrayMapComponent } from './array-map/array-map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArrayFindComponent
+    ArrayFindComponent,
+    ArrayMapComponent
   ],
   imports: [
     BrowserModule,
